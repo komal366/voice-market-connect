@@ -27,14 +27,12 @@ export function AuthForm({ userType, onBack }: AuthFormProps) {
         description: `Welcome ${userType}! Redirecting to your dashboard...`,
       });
       
-      // Simulate redirect based on role
+      // Redirect based on role
       setTimeout(() => {
         if (userType === 'vendor') {
-          // window.location.href = '/vendor-dashboard';
-          console.log('Redirecting to vendor dashboard...');
+          window.location.href = '/vendor-dashboard';
         } else {
-          // window.location.href = '/supplier-dashboard';
-          console.log('Redirecting to supplier dashboard...');
+          window.location.href = '/supplier-dashboard';
         }
       }, 1500);
     }, 2000);
